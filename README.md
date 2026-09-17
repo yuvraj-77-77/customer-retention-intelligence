@@ -105,6 +105,33 @@ The bundled dataset (`data/European_Bank.csv`) is provided for demonstration. Sw
 
 ---
 
+## 📸 Project Screenshots
+
+The following screenshots demonstrate the major modules and interactive features of the Customer Retention Intelligence dashboard.
+
+### Executive Dashboard
+
+The Executive Dashboard provides a high-level overview of customer retention, churn indicators, key performance metrics, and business insights.
+
+![Executive Dashboard](screenshots/Executive_Dashboard_pj.png)
+
+### Customer Explorer
+
+The Customer Explorer allows users to examine customer-level information and explore the underlying dataset interactively.
+
+![Customer Explorer](screenshots/Customer_Explorer_pj.png)
+
+### Segment Analysis
+
+The Segment Analysis module provides insights into different customer segments and helps identify patterns in customer behaviour and retention.
+
+![Segment Analysis](screenshots/Segment_Analysis_pj.png)
+
+### Data Health
+
+The Data Health module provides an overview of dataset quality, missing values, data consistency, and other data-quality indicators.
+
+![Data Health](screenshots/Data_Healt_pj.png)
 ## Ownership & License
 
 **Owner:** Yuvraj Singh
