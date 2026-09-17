@@ -1,0 +1,211 @@
+/* ---------------------------------------------------------------
+   Customer Retention Analytics Pro — Custom Theme
+   Palette: Slate / Deep Navy background, Emerald accent
+--------------------------------------------------------------- */
+
+:root {
+    --bg-primary: #0b1220;
+    --bg-secondary: #111a2b;
+    --bg-card: #141f35;
+    --border-color: #22304a;
+    --text-primary: #e5e9f0;
+    --text-secondary: #8b98b3;
+    --accent: #10b981;
+    --accent-soft: rgba(16, 185, 129, 0.14);
+    --danger: #f87171;
+    --warning: #fbbf24;
+    --indigo: #6366f1;
+}
+
+html, body, [class*="css"] {
+    font-family: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Remove default Streamlit top padding */
+.block-container {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    max-width: 1400px;
+}
+
+/* App background */
+[data-testid="stAppViewContainer"] {
+    background: radial-gradient(circle at 10% 0%, #101b30 0%, #0b1220 45%, #0a0f1c 100%);
+}
+
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #0d1626 0%, #0a0f1c 100%);
+    border-right: 1px solid var(--border-color);
+}
+[data-testid="stSidebar"] .block-container {
+    padding-top: 1.5rem;
+}
+
+/* Headers */
+h1, h2, h3, h4 {
+    font-weight: 700 !important;
+    letter-spacing: -0.01em;
+    color: var(--text-primary) !important;
+}
+h1 { font-size: 1.9rem !important; }
+h2 { font-size: 1.35rem !important; }
+h3 { font-size: 1.1rem !important; }
+
+.app-title {
+    font-size: 1.55rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+    margin-bottom: 0;
+}
+.app-subtitle {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: -4px;
+}
+
+/* Divider */
+hr {
+    border-color: var(--border-color) !important;
+}
+
+/* Metric cards */
+.metric-card {
+    background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 18px 20px;
+    height: 100%;
+    transition: border-color 0.15s ease;
+}
+.metric-card:hover {
+    border-color: rgba(16, 185, 129, 0.4);
+}
+.metric-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 6px;
+}
+.metric-value {
+    font-size: 1.65rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.1;
+}
+.metric-delta {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 6px;
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 999px;
+}
+.metric-delta.positive {
+    color: var(--accent);
+    background: var(--accent-soft);
+}
+.metric-delta.negative {
+    color: var(--danger);
+    background: rgba(248, 113, 113, 0.14);
+}
+.metric-delta.neutral {
+    color: var(--text-secondary);
+    background: rgba(139, 152, 179, 0.12);
+}
+
+/* Section card wrapper */
+.section-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 20px 22px;
+    margin-bottom: 1rem;
+}
+
+/* Badges / tags */
+.tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: var(--accent-soft);
+    color: var(--accent);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+/* Buttons */
+.stButton > button, .stDownloadButton > button {
+    background: var(--accent) !important;
+    color: #05140f !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-weight: 700 !important;
+    padding: 0.5rem 1.1rem !important;
+    transition: filter 0.15s ease, transform 0.05s ease;
+}
+.stButton > button:hover, .stDownloadButton > button:hover {
+    filter: brightness(1.08);
+}
+.stButton > button:active, .stDownloadButton > button:active {
+    transform: scale(0.98);
+}
+
+/* Secondary / ghost buttons via kind=secondary */
+button[kind="secondary"] {
+    background: transparent !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+/* Tabs */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 4px;
+    border-bottom: 1px solid var(--border-color);
+}
+.stTabs [data-baseweb="tab"] {
+    background: transparent;
+    color: var(--text-secondary);
+    font-weight: 600;
+    padding: 8px 16px;
+}
+.stTabs [aria-selected="true"] {
+    color: var(--accent) !important;
+    border-bottom: 2px solid var(--accent) !important;
+}
+
+/* Dataframe */
+[data-testid="stDataFrame"] {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Inputs */
+.stSelectbox > div > div, .stMultiSelect > div > div {
+    background-color: var(--bg-secondary) !important;
+    border-color: var(--border-color) !important;
+    border-radius: 8px !important;
+}
+
+/* Alerts */
+[data-testid="stAlert"] {
+    border-radius: 10px;
+}
+
+/* Footer / watermark hide */
+#MainMenu, footer, header[data-testid="stHeader"] {
+    visibility: visible;
+}
+footer {visibility: hidden;}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
